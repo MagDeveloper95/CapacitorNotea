@@ -1,0 +1,39 @@
+
+<ion-card-header class="card-header">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Inicia Sesion</ion-title>
+  </ion-toolbar>
+</ion-card-header>
+
+<ion-content  class="background-image" no-scroll padding>
+  <ion-card class="card">
+    <form>
+      <ion-item class="text-color2" color="none" lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="text" #email required ></ion-input>
+      </ion-item>
+  
+      <ion-item class="text-color2" color="none" lines="full">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" #password required></ion-input>
+      </ion-item>
+     
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" (click)="logIn(email,password)" color="danger"  expand="block">Iniciar</ion-button>
+        </ion-col>
+      </ion-row>
+      <span class="center-span"> or </span>
+          <ion-row>
+            <ion-col>
+          <ion-button (click)="signinWithGoogle()" color="primary" expand="block">Google</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+        <a (click)="recovery()" style = "float: left;"class="small-text">Olvidaste tu contraseña?</a>
+        <a (click)="register()" style = "float: right"class="small-text">Create una cuenta!</a>
+  </ion-card>
+</ion-content>

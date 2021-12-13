@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Editar Nota</ion-title>
+    <ion-button  slot="end" fill="clear" size="large" (click)="closeModal()">
+      <ion-icon style="color: red;" name="close-circle"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>  
+  <form [formGroup]="formNota" (ngSubmit)="editNote()">
+    <ion-item>
+        <ion-label>Título</ion-label>
+        <ion-input type="text" formControlName="tittle" [(ngModel)]="this.note.tittle"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Description</ion-label>
+        <ion-textarea type="text" formControlName="description" [(ngModel)]="this.note.description"></ion-textarea>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="primary" type="Submit" [disabled]="this.formNota.invalid">Agregar</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+    <ion-button (click)="speak()" expand="block" shape="round" [disabled]="startButton"><ion-icon name="mic-outline"></ion-icon></ion-button>
+       </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+    <ion-button  (click)="stop()" expand="block" shape="round"  [disabled]="stopButton"><ion-icon name="mic-off-outline"></ion-icon></ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+    <ion-button (click)="speakText()" expand="block" shape="round" ><ion-icon name="radio-outline"></ion-icon></ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
+

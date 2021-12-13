@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      {{'CONTACTS' | translate | titlecase}}
+    </ion-title>
+    <ion-button  slot="end" fill="clear" size="large" (click)="closeSession()">
+      <ion-icon style="color: red;" name="exit-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  ES<ion-toggle color="primary" (ionChange)=cambiaIdioma($event) #mitoggle></ion-toggle>EN
+  <ion-button (click)="hazFoto()" expand="block" shape="round"><ion-icon name="camera"></ion-icon></ion-button>
+  <ion-img *ngIf="this.image" [src]="this.image"></ion-img>
+</ion-content>

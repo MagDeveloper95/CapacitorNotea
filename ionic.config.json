@@ -1,0 +1,7 @@
+{
+  "name": "CapNotea",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

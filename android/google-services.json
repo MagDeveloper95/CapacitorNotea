@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "712487321461",
+    "project_id": "notea-a485a",
+    "storage_bucket": "notea-a485a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712487321461:android:8dc2cd0c72bd10f607dd3c",
+        "android_client_info": {
+          "package_name": "com.abe.CapNotea"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "712487321461-nsjk2fk9sm58ge7esg9ap3anelu8af1v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.abe.CapNotea",
+            "certificate_hash": "51544583b6f87d5296671be007fa0b2010d8498b"
+          }
+        },
+        {
+          "client_id": "712487321461-tnir133v7uivp20vsfpnbppjd9bd39kq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUHtWTHiMqKJJXQ10POhdJ5zUi6IjJWzg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "712487321461-tnir133v7uivp20vsfpnbppjd9bd39kq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

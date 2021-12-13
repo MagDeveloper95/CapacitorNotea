@@ -1,0 +1,27 @@
+.background-image{
+    --background: url(../../../assets/images/background.jpg) 0 0/100% 100% no-repeat;
+    background-size: cover; 
+}
+// cambiar color de letras
+.text-color{
+    color: rgb(0, 0, 0);
+}
+.text-color2{
+    color: rgb(3, 30, 90);
+}
+.text{
+    color: rgba(5, 53, 212, 0);
+    text-align: center;
+}
+.card{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin-top: 20px;
+    color: rgb(3, 30, 90);
+}
+.buttonblack{
+    //transparent button
+    background-color: rgba(252, 252, 252, 0);
+}

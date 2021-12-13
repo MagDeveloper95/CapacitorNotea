@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">CapNotea</string>
+    <string name="title_activity_main">CapNotea</string>
+    <string name="package_name">com.abe.CapNotea</string>
+    <string name="custom_url_scheme">com.abe.CapNotea</string>
+    <string name= "server_client_id">712487321461-tnir133v7uivp20vsfpnbppjd9bd39kq.apps.googleusercontent.com</string>
+</resources>

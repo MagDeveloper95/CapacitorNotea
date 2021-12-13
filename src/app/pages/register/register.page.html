@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Regístrate</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="background-image" no-scroll padding>
+  <form>
+    <ion-item class="text-color2" color="none" lines="full">
+      <ion-label class="text-color" position="floating">Email</ion-label>
+      <ion-input class="text-color" type="text" #email required></ion-input>
+    </ion-item>
+    <ion-item class="text-color2"  color="none"  lines="full">
+      <ion-label class="text-color"  position="floating">Contraseña</ion-label>
+      <ion-input class="text-color" type="password" #password required></ion-input>
+    </ion-item>
+    <hr />
+    <hr>
+    <hr>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" (click)="onRegister(email,password)" color="primary" expand="block"
+          >Regístrate</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

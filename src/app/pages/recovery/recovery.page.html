@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Recupera tu contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  class="background-image" no-scroll padding>
+  <ion-card class="card">
+    <form>
+      <ion-item class="text-color2" color="none" lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="text" #email required></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" (click)="onResetPassword(email)" color="danger" expand="block">Enviar</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+    <h5>
+      Por favor, ingresa tu email y te enviaremos un enlace para recuperar tu contraseña.  
+      Si no recibes el correo, por favor revisa tu bandeja de correo no deseado o en la carpeta de spam.
+    </h5>
+  </ion-card>
+</ion-content>
