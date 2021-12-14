@@ -17,7 +17,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
     ExploreContainerComponentModule,
     RouterModule.forChild([{ path: '', component: Tab3Page }]),
     Tab3PageRoutingModule,
-    TranslateModule
+    TranslateModule,
   ],
   declarations: [Tab3Page],
   providers:[TranslateService] //hay que meterlo en cada pagina que vaya a usar el translate service (traductor)

@@ -7,16 +7,19 @@ import { Tab2Page } from './tab2.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { Tab2PageRoutingModule } from './tab2-routing.module';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
+    TranslateModule,
     ExploreContainerComponentModule,
     Tab2PageRoutingModule,
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [Tab2Page]
+  declarations: [Tab2Page],
+  providers:[TranslateService]
 })
 export class Tab2PageModule { }
