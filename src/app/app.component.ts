@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { App } from '@capacitor/app';
 import { GoogleAuth } from '@codetrix-studio/capacitor-google-auth';
 import { Platform } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
@@ -16,6 +17,10 @@ export class AppComponent implements OnInit {
   constructor(private traductor:TranslateService,
     private storage:LocalStorageService,
     private authS:AuthService,private platform:Platform) {
+      this.platform.backButton.subscribeWithPriority(10, () => {
+        App.exitApp();
+      });
+        
       this.isAndroid=this.platform.is("android");
       (async() =>{
         let lang= await storage.getItem("lang");
@@ -31,6 +36,7 @@ export class AppComponent implements OnInit {
           traductor.setDefaultLang('en');
         }
       })();  
+   
   }
   async ngOnInit() {
     this.platform.ready().then(async ()=>{

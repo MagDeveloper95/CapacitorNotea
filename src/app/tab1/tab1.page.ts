@@ -32,6 +32,10 @@ export class Tab1Page {
     public alertController: AlertController
   ) {}
 
+  async ngOnInit() {
+    await this.ns.setUserInfo();
+  }
+
   async ionViewDidEnter() {
     await this.cargaNotas();
   }

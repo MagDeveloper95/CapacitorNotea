@@ -23,7 +23,7 @@ export class Tab3Page {
       console.log(data);
     })*/
   }
-
+  /**
   ionViewDidEnter() {
     const lang = this.traductor.getDefaultLang();
     if (lang == 'es') {
@@ -31,7 +31,7 @@ export class Tab3Page {
     } else {
       this.mitoogle.checked = true;
     }
-  }
+  }*/
 
   public async hazFoto() {
     let options: ImageOptions = {

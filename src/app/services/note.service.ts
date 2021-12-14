@@ -4,6 +4,7 @@ import * as firebase from 'firebase/compat';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Note } from '../shared/note.interface';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,9 @@ import { Note } from '../shared/note.interface';
 export class NoteService {
   private last:any=null;
   private myCollection: AngularFirestoreCollection;
+  private myCollectionString: string;
 
-  constructor(private db: AngularFirestore) {
+  constructor(private db: AngularFirestore, private authS: AuthService) {
     this.myCollection = db.collection<any>(environment.firebaseConfig.todoCollection);
   }
   /**
@@ -103,14 +105,13 @@ export class NoteService {
       let result: Note[] = [];
       let query=null;
       if(this.last){
-        query=this.db.collection<any>(environment.firebaseConfig.todoCollection,
+        query=this.db.collection<any>(this.myCollectionString,
           ref => ref.limit(11).startAfter(this.last));
       }else{
-        query=this.db.collection<any>(environment.firebaseConfig.todoCollection,
+        query=this.db.collection<any>(this.myCollectionString,
           ref => ref.limit(11));
       }
-      
-        
+
         query.get()
         .subscribe(
           (data: firebase.default.firestore.QuerySnapshot<firebase.default.firestore.DocumentData>) => {
@@ -125,5 +126,14 @@ export class NoteService {
             observer.complete();
           }) //final del subscribe
     }); //final del return observable
+  }
+  public async setUserInfo() {
+    if (this.authS.user != null) {
+      this.myCollection = this.db.collection<any>(this.authS.user.email);
+      this.myCollectionString = this.authS.user.email;
+    } else {
+      this.myCollection = this.db.collection<any>(environment.firebaseConfig.todoCollection);
+      this.myCollectionString = environment.firebaseConfig.todoCollection;
+    }
   }
 }

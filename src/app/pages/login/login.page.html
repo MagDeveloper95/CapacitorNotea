@@ -23,13 +23,19 @@
      
       <ion-row>
         <ion-col>
-          <ion-button type="submit" (click)="logIn(email,password)" color="danger"  expand="block">Iniciar</ion-button>
+          <ion-button type="submit" (click)="logIn(email,password)" color="danger"  expand="block">
+            <ion-icon name="log-in"></ion-icon>&nbsp;
+             Iniciar Sesion
+          </ion-button>
         </ion-col>
       </ion-row>
       <span class="center-span"> or </span>
           <ion-row>
             <ion-col>
-          <ion-button (click)="signinWithGoogle()" color="primary" expand="block">Google</ion-button>
+          <ion-button (click)="signinWithGoogle()" color="primary" shape= "round" expand="block">
+            <ion-icon name="logo-google"></ion-icon>&nbsp;
+             Iniciar con Google
+          </ion-button>
         </ion-col>
       </ion-row>
     </form>
