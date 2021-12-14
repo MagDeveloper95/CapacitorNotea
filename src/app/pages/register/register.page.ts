@@ -32,7 +32,7 @@ export class RegisterPage implements OnInit {
       this. presentToast('Verifica tu correo para activar tu cuenta');
       console.log(user);
       await this.autService.keepSession();
-
+      this.router.navigate(['']);
     }
     }catch(error){
       console.log(error);
